@@ -1,7 +1,7 @@
 
 import { CommandArguments, ExecuteCommandResult, ICommandHandler } from "../types";
 
-export class CommandHotFoundHandler implements ICommandHandler {
+export class CommandNotFoundHandler implements ICommandHandler {
     execute(args?: CommandArguments):ExecuteCommandResult
     {
         let result = {} as ExecuteCommandResult;

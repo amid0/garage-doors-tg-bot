@@ -1,5 +1,5 @@
 import { ICommandHandler, MessageModel } from "./types";
-import { CommandHotFoundHandler } from "./CommandHandlers/CommandHotFoundHandler";
+import { CommandNotFoundHandler } from "./CommandHandlers/CommandNotFoundHandler";
 import { OpenDoorCommandHandler } from "./CommandHandlers/OpenDoorCommandHandler";
 
 
@@ -32,7 +32,7 @@ export class MessageProcessor {
                 handler = new OpenDoorCommandHandler();
                 break;
             default:
-                handler = new CommandHotFoundHandler();
+                handler = new CommandNotFoundHandler();
                 break;
         }
 
