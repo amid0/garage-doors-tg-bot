@@ -4,24 +4,31 @@
     "description": "Telegram bot for control garage doors via IoT",
     "main": "index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "rimraf ./build && tsc"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/amid0/garage-doors-tg-bot.git"
+        "type": "git",
+        "url": "git+https://github.com/amid0/garage-doors-tg-bot.git"
     },
     "keywords": [
-      "iot",
-      "telegram",
-      "bot",
-      "garage",
-      "doors"
+        "iot",
+        "telegram",
+        "bot",
+        "garage",
+        "doors"
     ],
     "author": "Dmitriy Kashirny",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/amid0/garage-doors-tg-bot/issues"
+        "url": "https://github.com/amid0/garage-doors-tg-bot/issues"
     },
-    "homepage": "https://github.com/amid0/garage-doors-tg-bot#readme"
-  }
-  
+    "homepage": "https://github.com/amid0/garage-doors-tg-bot#readme",
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "rimraf": "^5.0.0",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "slimbot": "^5.1.0"
+    }
+}
