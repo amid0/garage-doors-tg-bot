@@ -1,0 +1,27 @@
+{
+    "name": "garage-doors-tg-bot",
+    "version": "1.0.0",
+    "description": "Telegram bot for control garage doors via IoT",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/amid0/garage-doors-tg-bot.git"
+    },
+    "keywords": [
+      "iot",
+      "telegram",
+      "bot",
+      "garage",
+      "doors"
+    ],
+    "author": "Dmitriy Kashirny",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/amid0/garage-doors-tg-bot/issues"
+    },
+    "homepage": "https://github.com/amid0/garage-doors-tg-bot#readme"
+  }
+  
