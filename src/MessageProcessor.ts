@@ -13,11 +13,15 @@ export class MessageProcessor {
     }
 
     shouldHandleMessage():boolean{
-        if(this.availableUserIds.some((id) => this.message.from.id === id)){
-            return true;
+        if(!this.availableUserIds.some((id) => this.message.from.id === id)){
+            return false;
+        }
+
+        if(this.message.from.is_bot){
+            return false;
         }
         
-        return false;
+        return true;
     }
 
     process():string{
