@@ -2,7 +2,6 @@ import { ICommandHandler, MessageModel } from "./types";
 import { CommandNotFoundHandler } from "./CommandHandlers/CommandNotFoundHandler";
 import { OpenDoorCommandHandler } from "./CommandHandlers/OpenDoorCommandHandler";
 
-
 export class MessageProcessor {
     readonly availableUserIds = [1840921151];
 
@@ -12,21 +11,30 @@ export class MessageProcessor {
         this.message = message;
     }
 
-    shouldHandleMessage():boolean{
+    validateMessage():string{
         if(!this.availableUserIds.some((id) => this.message.from.id === id)){
-            return false;
+            return `Unknown user id. MessageUserId:${this.message.from.id}`;
         }
 
         if(this.message.from.is_bot){
-            return false;
+            return 'Messages from bots cannot be handled';
         }
         
-        return true;
+        // validate message timestamp. prevent handling queued old messages 
+        const now = new Date().getTime();
+        const messageDate = this.message.date * 1000;
+
+        if((now - messageDate) >= 1000) {
+            return `Old messages cannot be handled. now:${now} msgDate:${messageDate} diff:${now - messageDate}ms`;
+        }
+
+        return '';
     }
 
     process():string{
-        if(!this.shouldHandleMessage()){
-            return "Can't process this message";
+        const validationResult = this.validateMessage();
+        if(validationResult){
+            return validationResult;
         }
 
         let handler:ICommandHandler;

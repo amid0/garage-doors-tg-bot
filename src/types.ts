@@ -17,7 +17,7 @@ export interface ChatModel{
 
 export interface MessageModel{
     message_id:number;
-    date:Date;
+    date:number;
     text:string;
     from:FromModel;
     chat:ChatModel;

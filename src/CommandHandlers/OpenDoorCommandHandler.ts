@@ -6,6 +6,7 @@ export class OpenDoorCommandHandler implements ICommandHandler {
     {
         let result = {} as ExecuteCommandResult;
 
+        // 
         result.isSuccess = true;
 
         return result;

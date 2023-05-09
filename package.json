@@ -4,7 +4,8 @@
     "description": "Telegram bot for control garage doors via IoT",
     "main": "index.js",
     "scripts": {
-        "build": "rimraf ./build && tsc"
+        "build": "rimraf ./build && tsc",
+        "run": "npm run build && node ./build/telegramBot.js"
     },
     "repository": {
         "type": "git",
