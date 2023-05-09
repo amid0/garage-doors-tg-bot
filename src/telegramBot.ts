@@ -1,4 +1,4 @@
-process.env.TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '6144513613:AAH1CbZ_qOYBDXi7m1XW2nlWN1xoDNIszzk'
+process.env.TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || 'xxxxx'
 
 import {MessageModel} from './types'
 import { MessageProcessor } from './MessageProcessor';

@@ -1,6 +1,6 @@
 import { ICommandHandler, MessageModel } from "./types";
 import { CommandNotFoundHandler } from "./CommandHandlers/CommandNotFoundHandler";
-import { OpenDoorCommandHandler } from "./CommandHandlers/OpenDoorCommandHandler";
+import { OpenGatesCommandHandler } from "./CommandHandlers/OpenGatesCommandHandler";
 
 export class MessageProcessor {
     readonly availableUserIds = [1840921151];
@@ -40,8 +40,8 @@ export class MessageProcessor {
         let handler:ICommandHandler;
 
         switch (this.message.text) {
-            case '/open':
-                handler = new OpenDoorCommandHandler();
+            case '/opengates':
+                handler = new OpenGatesCommandHandler();
                 break;
             default:
                 handler = new CommandNotFoundHandler();

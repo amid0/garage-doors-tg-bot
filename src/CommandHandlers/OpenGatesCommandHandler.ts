@@ -1,7 +1,7 @@
 
 import { CommandArguments, ExecuteCommandResult, ICommandHandler } from "../types";
 
-export class OpenDoorCommandHandler implements ICommandHandler {
+export class OpenGatesCommandHandler implements ICommandHandler {
     execute(args?: CommandArguments):ExecuteCommandResult
     {
         let result = {} as ExecuteCommandResult;
