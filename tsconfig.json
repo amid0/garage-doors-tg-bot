@@ -11,10 +11,12 @@
       "resolveJsonModule": true
     },
     "include": [
-        "src/**/*.ts"
+        "src/**/*.ts",
+        "cdk/**/*.ts"
     ],
     "exclude": [
       "node_modules",
-      "build"
+      "build",
+      "cdk.out"
     ]
   }

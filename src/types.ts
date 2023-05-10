@@ -15,6 +15,11 @@ export interface ChatModel{
     type: 'private';
 }
 
+export interface UpdateMessageModel{
+    update_id:number;
+    message:MessageModel;
+}
+
 export interface MessageModel{
     message_id:number;
     date:number;

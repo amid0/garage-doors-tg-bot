@@ -24,7 +24,7 @@ export class MessageProcessor {
         const now = new Date().getTime();
         const messageDate = this.message.date * 1000;
 
-        if((now - messageDate) >= 1000) {
+        if((now - messageDate) >= 15000) {
             return `Old messages cannot be handled. now:${now} msgDate:${messageDate} diff:${now - messageDate}ms`;
         }
 
